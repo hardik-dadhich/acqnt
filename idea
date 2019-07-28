@@ -7,3 +7,25 @@ Acqnt:
 5. Activity feeds about user's location.(info like bajrang dal activities, restaurants, cafe, tourist places, etc.)
 6. One to One profile matching system whereby a user can communicate with only one user at a time.
 
+
+Actors: Single Users, Couples, Admin
+
+Necessary Features: 
+0. signup through fb or email + phone number
+1. user profile (photos, about, relationship status, interests, friends[invisible to other users && can be added only through invite links && deleted 
+through friend list])
+2. 1 to 1 profile mapping (profiles shown based on user location)
+3. chatbox (chat via text with options to send photos/videos, block profile option) 
+4. activity feeds (local community, restaurants)
+5. settings (block list, deactivate && delete account) 
+
+Addon Features: 
+1. activity feeds (news, tourist places, favourites, couple games, couple score)
+2. 1 to 1 profile mapping (profiles shown based on user interest score and location scope)
+3. chatbox (chat via call/video, send gifs/audio files)
+4. settings (email notifications)
+5. new users are required to send their photo with a handwritten note or with some hand gesture
+
+
+/* Tentative feature list. Modifications are welcome. */
+
