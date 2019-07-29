@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.views.generic import TemplateView
 # Create your views here.
-def homepage(request):
-	return render(request,'homePage.html', None)
+class Homepage(TemplateView):
+	#return render(request,'homePage.html', None)
+	template_name = 'index.html'
 
 
