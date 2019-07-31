@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'relationManager/templates/relationManager')
+#TEMPLATE_DIR = os.path.join(BASE_DIR, 'relationManager/templates/relationManager')
 
 
 # Quick-start development settings - unsuitable for production
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'Coupledial.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR,],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,16 +71,16 @@ TEMPLATES = [
     },
 ]
 # added two file assets and web pack loader for React
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'assets'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'assets'),
+# )
 
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'dist/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
-    }
-}
+# WEBPACK_LOADER = {
+#     'DEFAULT': {
+#         'BUNDLE_DIR_NAME': 'dist/',
+#         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+#     }
+# }
 
 WSGI_APPLICATION = 'Coupledial.wsgi.application'
 
@@ -133,4 +133,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'staticfiles'), 
+]
